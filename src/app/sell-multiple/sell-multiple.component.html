@@ -1,0 +1,102 @@
+<app-header-resources></app-header-resources>
+
+<section class="first-section custom-section">
+    <div class="custom-row overflow-auto">
+        <div class="float-right first-tab text-center mobile-none mt-3 pr-0">
+          <div class="mt-5">
+            <img src="../../assets/images/sell-multiple-domains/Saw-Com-Portfolio-Management-sale.png" width="200">
+          </div>
+        </div>
+        <div class="float-right second-tab mt-3">
+            <p class="">Portfolio Management</p>
+            <h2>Own a portfolio of investment-grade domains?</h2>
+            <p>If so, let’s take your sales strategy to the next level! We have the data, infrastructure, and experience to maximize results on all fronts. From creating effective and highly optimized sales-oriented landing pages for your domains to following up with leads one-by-one to get the best price, we are a white-glove service like no other in the domain industry!</p>
+            <a (click)="open(content)" class="bg-secondary text-white btn btn-rounded size-button center-mobile text-capitalize py-3">Speak With An Expert</a>
+        </div>
+    </div>
+</section>
+
+<section class="back-img">
+    <div class="sell-row">
+        <h1 class="font-weight-bold">More specifically, we can:</h1>
+        <div class="row px-0">
+            <div class="col-sm-12 col-md-6 col-lg-3 px-2">
+                <div class="border-secondary-rounded bg-white p-3 mt-3">
+                    <div class="overflow-auto position-relative custom-height-1">
+                        <h3 class="text-uppercase font-weight-bold float-left position-absolute" style="top: 45px;">Review</h3>
+                        <p class="float-right font-weight-bold text-secondary position-relative num-opacity" style="font-size: 100px; top: -45px;">1</p>
+                        <p class="position-absolute mb-0" style="top: 90px;">Review portfolios and make suggestions concerning which domain names should be auctioned, which should be dropped, and how price expectations should be tweaked.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 px-2">
+                <div class="border-secondary-rounded bg-white p-3 mt-3">
+                    <div class="overflow-auto position-relative custom-height-1">
+                        <h3 class="text-uppercase font-weight-bold float-left position-absolute" style="top: 45px;">Maximize</h3>
+                        <p class="float-right font-weight-bold text-secondary position-relative num-opacity" style="font-size: 100px; top: -45px;">2</p>
+                        <p class="position-absolute mb-0" style="top: 90px;">Maximize revenue by following a buyer education approach and placing our optimized sales landers on every name in your portfolio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 px-2">
+                <div class="border-secondary-rounded bg-white p-3 mt-3">
+                    <div class="overflow-auto position-relative custom-height-1">
+                        <h3 class="text-uppercase font-weight-bold float-left position-absolute" style="top: 45px;">Create</h3>
+                        <p class="float-right font-weight-bold text-secondary position-relative num-opacity" style="font-size: 100px; top: -45px;">3</p>
+                        <p class="position-absolute mb-0" style="top: 90px;">When organic demand is not there, we roll up our sleeves and call end-users to create demand.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 px-2">
+                <div class="border-secondary-rounded bg-white p-3 mt-3">
+                    <div class="overflow-auto position-relative custom-height-1">
+                        <h3 class="text-uppercase font-weight-bold float-left position-absolute" style="top: 45px;">Advertise</h3>
+                        <p class="float-right font-weight-bold text-secondary position-relative num-opacity" style="font-size: 100px; top: -45px;">4</p>
+                        <p class="position-absolute mb-0" style="top: 90px;">Advertise the availability of your assets to the best of our ability, from going wide with well-calibrated press releases to a more granular approach involving our network of premium domain buyers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a (click)="open(content)" class="bg-secondary text-white btn btn-rounded size-button text-capitalize py-3 my-3">Contact SAW Consultant</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="custom-row overflow-auto">
+        <h1 class="font-weight-bold my-3 custom-title">Let us know:</h1>        
+        <div class="float-left first-tab text-center mb-5 pl-0">
+            <img class="w-100" src="../../assets/images/sell-multiple-domains/Saw-com-domain-portfolio-for-sale.png" >
+        </div>
+        <div class="float-left second-tab">
+            <ul class="list-secondary">
+                <li class="mb-3">How many domains you would like us to manage</li>
+                <li class="mb-3">What your top 3-5 digital assets are </li>
+                <li>What valuation you have in mind for your best digital assets as well as the portfolio as a whole</li>
+            </ul>
+            <p>Armed with this information, our team will analyze your portfolio and help you come up with a coherent strategy moving forward. We will let you know if your valuation is in line with what we have in mind, what can be expected in terms of profits, and which area(s) of your strategy deserve attention first. We will then implement an agreed-upon plan and manage your sales opportunities in a manner conducive to extracting the most revenue from your assets.</p>
+            <a (click)="open(content)" class="bg-secondary text-white btn btn-rounded size-button center-mobile text-capitalize mt-1 py-3">Speak With An Expert</a>
+        </div>
+    </div>
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header border-0">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">    
+        <div class="row content-center">
+            <div class="sidebar text-center">
+                <h1 class="font-weight-bold mb-3">Contact Us</h1>
+                <p class="">Regarding a Portfolio Management</p>
+                <h4 class="font-weight-bold text-secondary">Call +1 (781) 281-9475</h4>
+                <p class="">EST time from 9 AM to 5 PM</p>
+                <p class="">Or</p>
+            </div>
+        </div>
+        <app-contact [servicesNeeded]="'Portfolio'"></app-contact>
+    </div>
+</ng-template>

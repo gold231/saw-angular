@@ -1,0 +1,51 @@
+$white: #fff !default;
+$primary: #ffc10f !default;
+$secondary: #ff812b !default;
+$gray-100: #f8f9fa !default;
+$gray-300: #dee2e6 !default;
+$gray-900: #212529 !default;
+$transition-base: all 0.2s ease-in-out !default;
+$black: #000 !default;
+
+$theme-colors: (
+  "primary": #ffc10f,
+  "secondary": #ff812b,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1400px,
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1200px,
+  xl: 1664px,
+) !default;
+
+$grid-gutter-width: 80px !default;
+
+$border-radius-rounded: 35px !default;
+
+$font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
+
+$font-weight-light: 300 !default;
+$font-weight-base: $font-weight-light !default;
+$input-btn-font-size: $font-size-base !default;
+$line-height-base: 1.7 !default;
+
+$btn-font-size: ($input-btn-font-size) - 0.3 !default;
+$font-weight-bold: 700 !default;
+$btn-font-weight: $font-weight-bold !default;
+
+$btn-border-radius: $border-radius-rounded !default;
+
+$navbar-nav-link-padding-x: 2rem !default;
+
+$modal-lg: 90% !default;
+
+$enable-gradients: true !default;

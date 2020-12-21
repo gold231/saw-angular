@@ -1,0 +1,17 @@
+.custom-height-1 {
+    height: 360px;
+    @media (max-width: 991px) {
+        height: 270px;
+    }
+    @media (max-width: 767px) {
+        height: auto;
+    }
+}
+.sell-row {
+    width: 90%;
+    margin: 0 5%;
+    @media (max-width: 991px) {
+        width: 80%;
+        margin: 0 10%;
+    }
+}

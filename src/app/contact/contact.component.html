@@ -1,0 +1,90 @@
+
+<div class="container">
+    <div class="row content-center">
+        <div class="shadow contact-width"> 
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <div class="mb-3"
+                        [class.has-error]="nameError || (submitted && !contactForm.get('name').valid)">
+                        <label class="mb-3" for="name">Name *</label>
+                        <input type="text" maxlength="50" formControlName="name" placeholder="Your name"
+                            class="form-control bg-light font-italic">
+                        <div class="text-red" *ngIf="submitted && contactForm.get('name').hasError('required')">
+                            {{errorMessages.name.message}}
+                        </div>
+                    </div>
+                    <div class="mb-3"
+                        [class.has-error]="emailError || (submitted && !contactForm.get('email').valid)">
+                        <label class="mb-3" for="email">Email *</label>
+                        <input type="email" maxlength="75" formControlName="email" placeholder="Email address" class="form-control bg-light font-italic">
+                        <div class="error" *ngIf="!submitted && emailErrorAlert">
+                            {{ errorMessages.email.message}}
+                        </div>
+                        <div class="text-red" *ngIf="submitted && (contactForm.get('email').hasError('required') || contactForm.get('email').hasError('email'))">
+                            Email is required.
+                        </div>
+                    </div>
+                    <div class="mb-3"
+                        [class.has-error]="phoneNumberError || (submitted && !contactForm.get('phoneNumber').valid)">
+                        <label class="mb-3" for="phone">Phone</label>
+                        <input type="tel" maxlength="20" formControlName="phoneNumber" placeholder="Mobile phone"
+                            class="form-control bg-light font-italic">
+                        <div class="error" *ngIf="!submitted && phoneNumberErrorAlert">
+                            {{ errorMessages.phoneNumber.message}}
+                        </div>
+                        <div class="text-red" *ngIf="submitted && (contactForm.get('phoneNumber').hasError('required') || contactForm.get('phoneNumber').hasError('pattern'))">
+                            Phone number is required.
+                        </div>
+                    </div>
+                    <div class="mb-3"
+                        [class.has-error]="commentsError || (submitted && !contactForm.get('comments').valid)">
+                        <label class="mb-3" for="comments">Comments</label>
+                        <textarea class="form-control bg-light font-italic" maxlength="200" formControlName="comments" placeholder="Comment" rows="3"></textarea>
+                        <div class="text-red" *ngIf="submitted && contactForm.get('comments').hasError('required')">
+                            Comments are required.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <div class="custom-checkbox-item">
+                                <input type="checkbox" formControlName="news" class="custom-checkbox"
+                                    id="newsletterCheckbox">
+                                <label for="newsletterCheckbox" class="newsletter">Get Newsletter from Saw.com to stay up-to-date on the latest and greatest in the domain world.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <div class="custom-checkbox-item" [class.has-error]="true">
+                                <input type="checkbox" formControlName="privacy" class="custom-checkbox"
+                                    id="privacyPolicyCheckbox">
+                                <label for="privacyPolicyCheckbox" class="newsletter">
+                                    <div class="d-block">I have read and accept the 
+                                        <a routerLink="/privacy-policy" class="text-secondary">Privacy Policy.</a>
+                                    </div> 
+                                </label>
+                                <div class="text-red text-center mt-3" *ngIf="privacyErrorAlert" >
+                                    {{errorMessages.privacy.message}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="content-center w-100 mt-2" [class.has-error]="!this.contactForm.valid">
+                            <button type="submit" data-dismiss="modal" aria-label="close" class="btn bg-secondary text-white text-capitalize size-button center-mobile p-2">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="progress-loader" [hidden]="!loading">
+    <div class="loading-spinner">
+        <img src="../../assets/images/icons/spinner.gif">
+        <span class="loading-message">Please wait...</span>
+    </div>
+</div>

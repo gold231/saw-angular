@@ -1,0 +1,23 @@
+.text-red {
+    color: red !important;
+}
+
+.loading-spinner{    
+    background-color: #0000002f;
+    position: absolute;
+    width: 100%;
+    top: -60px;
+    left: 0px;
+    height: 1080px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    img{
+        align-self: end;
+    }
+}
+
+.loading-message{
+    text-align: center;
+    align-self: start;
+}

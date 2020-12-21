@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Executing Pre Build Phase
+      - npm install
+  build:
+    commands:
+      - echo Executing Build Phase
+      - npm run build:ssr-dev
+artifacts:
+  files:
+    - 'dist/**/*'
+    - 'package.json'
+    - '.ebextensions/**/*'
+    - '.platform/**/*'
